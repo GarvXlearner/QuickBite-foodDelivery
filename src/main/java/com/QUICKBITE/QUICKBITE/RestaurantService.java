@@ -4,9 +4,14 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class RestaurantService {
-    String welcomemsg()
+    private final RestaurantRepository restaurantRepository;
+    public RestaurantService(RestaurantRepository restaurantRepository)
     {
-        return "Welcome to QuickBite";
+        this.restaurantRepository=restaurantRepository;
+    }
+    public String getrestro()
+    {
+        return restaurantRepository.getrestro();
     }
     
 }
