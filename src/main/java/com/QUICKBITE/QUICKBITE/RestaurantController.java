@@ -11,8 +11,8 @@ public class RestaurantController {
     }
     public String getrestro()
     {
+        restaurantService.printAppInfo();
         return restaurantService.getrestro();
-
     }
 
     
